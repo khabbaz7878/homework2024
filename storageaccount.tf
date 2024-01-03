@@ -1,6 +1,6 @@
 resource "azurerm_storage_account" "storage" {
-  count = length(local.storage_names)
-  name = local.storage_names[count.index] 
+  count = length(local.homeworkexam2024)
+  name = local.homeworkexam2024[count.index] 
   resource_group_name = azurerm_resource_group.rg.name
   location = azurerm_resource_group.rg.location
   
