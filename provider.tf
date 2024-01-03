@@ -17,3 +17,12 @@ provider "azurerm"{
   client_secret=var.client_secret
   tenant_id=var.tenant_id
 }
+terraform {
+  cloud {
+    organization = "mcit20"
+
+    workspaces {
+      name = "Homeworkexam2024"
+    }
+  }
+}
