@@ -21,3 +21,12 @@ variable "subscription_id" {
 variable "tenant_id" {
   type = string
 }
+variable "storage_account_names" {
+ default = [
+    "A.[firstnamemcitlastname1]",
+    "B.[firstnamemcitlastname2]",
+    "C.[firstnamemcitlastname3]",
+    "D.[firstnamemcitlastname4]",
+    "E.[firstnamemcitlastname5]"
+ ]
+}
