@@ -1,3 +1,7 @@
+resource "azurerm_resource_group" "example" {
+ name     = "homework20024-rg"
+ location = "Canada East"
+}
 resource "azurerm_storage_account" "homework20024-rg" {
 count = length(var.storage_account_names)
 name                     = var.storage_account_names[count.index]
