@@ -2,11 +2,11 @@ resource "azurerm_resource_group" "example" {
  name     = "homework20024-rg"
  location = "Canada East"
 }
-resource "azurerm_storage_account" "homework20024-rg" {
-count = length(var.storage_account_names)
-name                     = var.storage_account_names[count.index]
-resource_group_name      = azurerm_resource_group.homework20024-rg.name
-location                 = azurerm_resource_group.homework20024-rg.location
-account_tier             = "Standard"
-account_replication_type = "GRS"
+resource "azurerm_storage_account" "example" {
+ for_each             = toset(var.homework2024-rg)
+ name                 = each.value
+ resource_group_name = azurerm_resource_group.homework2024-rg
+ location             = azurerm_resource_group.canadaeast
+ account_tier         = "Standard"
+ account_replication_type = "LRS"
 }
